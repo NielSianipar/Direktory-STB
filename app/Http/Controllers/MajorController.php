@@ -23,4 +23,9 @@ class MajorController extends Controller
 
         return view('welcome', compact('results'));
     }
+
+    public function show($id) {
+        $person = Person::findOrFail($id);
+        return view('profile', compact('person'));
+    }
 }

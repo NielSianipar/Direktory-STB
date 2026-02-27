@@ -22,3 +22,5 @@ Route::prefix('api')->group(function () {
         Route::get('/staff', [DirectoryController::class, 'staff']);
     });
 });
+
+Route::get('/profile/{id}', [MajorController::class, 'show'])->name('profile.show');

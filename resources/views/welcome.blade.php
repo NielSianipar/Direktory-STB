@@ -175,6 +175,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     @foreach($results as $index => $item)
+                  <a href="{{ route('profile.show', $item['id']) }}" class="block">
                     <div class="bg-white group p-6 rounded-3xl hover:-translate-y-2 shadow-sm hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.1)] transition-all duration-400 border border-slate-100 opacity-0 animate-[fadeInUp_0.8s_ease-out_forwards] relative overflow-hidden" style="animation-delay: {{ 0.4 + ($index * 0.1) }}s">
                         <!-- Decorative glow on hover -->
                         <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-primary-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -218,6 +219,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     @endforeach
                 </div>
             </div>
